@@ -226,7 +226,7 @@ app.get(
             SELECT tweet,(SELECT COUNT(like_id)
                            FROM like 
                            WHERE tweet_id=${tweetId}) AS likes,
-                           (SELECT COUNT(reply_id) AS replies 
+                           (SELECT COUNT(reply_id)
                            FROM reply 
                            WHERE tweet_id=${tweetId}) AS replies,
                            date_time
